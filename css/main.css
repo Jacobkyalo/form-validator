@@ -1,0 +1,129 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  line-height: 1.7;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url(../assets/blog-pro.jpg) no-repeat center;
+  background-size: cover;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.form-wrapper {
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-wrapper .form {
+  position: relative;
+  border: 2px solid #59ad05;
+  padding: 1.2rem;
+  border-radius: 6px;
+  width: 400px;
+}
+
+.form-wrapper .form #form {
+  padding: 1.2rem;
+}
+
+.form-wrapper .form #form label,
+.form-wrapper .form #form #name,
+.form-wrapper .form #form #password,
+.form-wrapper .form #form #submit-btn {
+  display: block;
+}
+
+.form-wrapper .form #form label {
+  color: #fff;
+  font-size: 1.2rem;
+  padding-bottom: 5px;
+}
+
+.form-wrapper .form #form #name,
+.form-wrapper .form #form #password {
+  padding: 10px;
+  width: 100%;
+  border: 0;
+  outline: 0;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.form-wrapper .form #form #submit-btn {
+  padding: 10px 30px;
+  background: #59ad05;
+  color: #fff;
+  border: 0;
+  border-radius: 6px;
+  margin-top: 20px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.form-wrapper .form #form .error {
+  color: red;
+}
+
+.success {
+  position: absolute;
+  top: 300px;
+  left: 550px;
+  text-align: center;
+  width: 300px;
+  height: 150px;
+  background-color: #73df06;
+  border: 0;
+  border-radius: 7px;
+  display: none;
+}
+
+.success p {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.success #success-btn {
+  border: 0;
+  border-radius: 5px;
+  padding: 10px 20px;
+  text-align: center;
+  background-color: black;
+  color: #fff;
+  margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+  .success {
+    left: 250px;
+    top: 400px;
+  }
+}
+
+@media (max-width: 400px) {
+  .success {
+    left: 50px;
+    top: 300px;
+  }
+}
